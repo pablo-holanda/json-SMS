@@ -9,8 +9,8 @@ def post():
     # Get the parsed contents of the form data
     json = request.json
     print(json['remetente'])
-    # destino = 'var/spool/sms/outgoing/%s.txt' % (json['remetente'])
-    destino = '/Users/pabloholanda/Desktop/%s.txt' % (json['remetente'])
+    destino = 'var/spool/sms/outgoing/%s.txt' % (json['remetente'])
+    # destino = '/Users/pabloholanda/Desktop/%s.txt' % (json['remetente'])
     file = open(destino, 'a')
     file.write("To: %s \n%s" % (json['remetente'], json['menssagem']))
     file.close()
