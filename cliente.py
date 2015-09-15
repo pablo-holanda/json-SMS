@@ -1,8 +1,8 @@
 import requests
 import json
 
-url = 'http://127.0.0.1:8000'
+url = 'http://192.168.1.95:8000'
 
-payload = {'remetente': '84997000080', 'menssagem': 'Isso aqui esta dando certo Fi.'}
+payload = {'remetente': '5584997000080', 'menssagem': 'Isso aqui esta dando certo Fi.'}
 
 r = requests.post(url, json=payload)
