@@ -12,7 +12,7 @@ def post():
     destino = '/var/spool/sms/outgoing/%s.txt' % (json['remetente'])
     # destino = '/Users/pabloholanda/Desktop/%s.txt' % (json['remetente'])
     file = open(destino, 'a')
-    file.write("To: %s \n\n%s" % (json['remetente'], json['menssagem']))
+    file.write("To: %s \n\n%s" % (json['remetente'], json['mensagem']))
     file.close()
     # Render template
     return jsonify(json)
